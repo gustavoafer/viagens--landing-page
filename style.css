@@ -1,0 +1,119 @@
+/* Reset básico e rolagem suave para as âncoras internas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; 
+}
+
+/* --- Navegação --- */
+nav {
+    background-color: #264653;
+    padding: 1rem;
+    position: sticky; /* Mantém a navegação no topo ao rolar a página */
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    /* Transição suave exigida nos requisitos */
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav a:hover {
+    background-color: #e76f51; /* Mudança de aparência no hover */
+    color: #fff;
+}
+
+/* --- Banner --- */
+.banner-section {
+    /* Imagem de um vilarejo europeu direto do Unsplash */
+    background-image: url('https://forbes.com.br/wp-content/uploads/2023/09/Life_Melhores-paises-para-morar-na-Europa-3-1024x683.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro transparente para contraste */
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Seções de Conteúdo --- */
+.conteudo-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Alterna as cores de fundo das seções para melhor visualização */
+.conteudo-section:nth-child(even) {
+    background-color: #f4f1de;
+}
+
+.conteudo-section h2 {
+    color: #2a9d8f;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.conteudo-section p {
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* --- Botões de Voltar ao Topo --- */
+.btn-voltar {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #e9c46a;
+    color: #264653;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    /* Efeito visual e transição de cor no hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #f4a261;
+    transform: scale(1.05); /* Pequeno aumento de tamanho ao passar o mouse */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+}
